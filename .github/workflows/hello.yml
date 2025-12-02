@@ -5,3 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, GitHub Actions!"
+  
+  welcome:
+    needs: say-hi
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Welcome to my repository!"
+  
