@@ -1,1 +1,4 @@
-print("Hello from script.py!")
+import os
+
+name = os.getenv("NAME")
+print("Hello ", name, "!")
