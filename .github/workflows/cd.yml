@@ -15,7 +15,7 @@ jobs:
 
       - name: Login to GHCR
         run: | 
-          token="${{ github.token }}" 
+          token="${{ secrets.GITHUB_TOKEN }}" 
           lower_token="$(echo "$token" | tr '[:upper:]' '[:lower:]')" 
           echo "$lower_token" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
